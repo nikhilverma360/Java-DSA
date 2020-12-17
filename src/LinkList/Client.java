@@ -1,7 +1,7 @@
 package LinkList;
 
 public class Client {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
         LinkedList list = new LinkedList();
         list.addLast(10);
@@ -11,5 +11,11 @@ public class Client {
         list.addFirst(101);
         list.addLast(40);
         list.display();
+        System.out.println("----------------------------------------");
+        System.out.println(list.getFirstNode());
+        System.out.println("----------------------------------------");
+        System.out.println(list.getLastNode());
+        System.out.println("----------------------------------------");
+        System.out.println(list.getNodeAt(1));
     }
 }

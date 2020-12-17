@@ -58,6 +58,24 @@ public class LinkedList {
 
     }
 
+    public int getFirstNode(){
+        return this.head.data;
+    }
 
+    public int getLastNode(){
+        return this.tail.data;
+    }
 
+    public int getNodeAt(int position) throws Exception {
+        if (!(position >0 && position<=this.size)){
+            throw new Exception("Position Shi Dall!");
+        }
+        Node temp = this.head;
+        int current=1;
+        while (current<position){
+            temp= temp.next;
+            current++;
+        }
+        return temp.data;
+    }
 }
